@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-9wzkpxq4Tpv9yl29E6hsZHTb9/uCvJiqBfV3K1V7OMF+ucV1CvZJNhWRxJapd4/y5ObZ5Jw1V6tiPpi6jjiNvA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Event Management</title>
+</head>
+<body>
+    <header>
+        <h1>Event Management</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#booking">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section parallax">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Welcome to our Events Platform</h2>
+            <p>Find and book your favorite events with ease!</p>
+            <a href="#events" class="btn">View Events</a>
+        </div>
+    </section>
+
+    <section id="events" class="section">
+        <h2>Upcoming Events</h2>
+        <div class="carousel" width="400px">
+            <div class="carousel-slide" width="400px">
+                <img src="conference.jpg" alt="Event 1" height="200px" >
+            </div>
+            <div class="carousel-slide">
+                <img src="party.jpg" alt="Event 2" height="200px" >
+            </div>
+            <div class="carousel-slide">
+                <img src="wedding.jpg" alt="Event 3" height="200px">
+            </div>
+        </div>
+        <div id="event-list"></div>
+    </section>
+
+    <section id="booking" class="section parallax">
+        <div class="overlay"></div>
+        <div class="content">
+            <h2>Book Your Tickets Now</h2>
+            <p>Don't miss out on these amazing events!</p>
+            <button class="btn">Book Now</button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>Event Management</h2>
+            </div>
+            <div class="footer-links">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#booking">Booking</a></li>
+                </ul>
+            </div>
+            <div class="footer-social">
+                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <p>&copy; 2024 Event Management</p>
+    </footer>
+
+    <div id="modal-container" class="modal-container">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2 id="modal-event-name"></h2>
+            <p id="modal-event-date"></p>
+            <p id="modal-event-location"></p>
+            <button onclick="bookTicket()">Book Ticket</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
